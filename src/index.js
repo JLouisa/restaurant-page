@@ -5,4 +5,4 @@ import "./style.css";
 home();
 
 console.log("It's working again!!");
-console.log(calculator.multi(5, 8));
+console.log(calculator.multi(4, 8));
