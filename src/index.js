@@ -1,6 +1,7 @@
 import home from "./homepage.js";
 import { calculator } from "./calculator.js";
 import "./style.css";
+// import "./image/greenWhiteCake.jpg";
 
 home();
 

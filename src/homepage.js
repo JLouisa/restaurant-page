@@ -1,3 +1,6 @@
+import food1 from "./images/greenWhiteCake.jpg";
+import food2 from "./images/smooties.jpg";
+
 const home = function () {
   const contentEl = document.getElementById("content");
   const navEl = document.createElement("nav");
@@ -27,6 +30,47 @@ const home = function () {
 
   mainEl.classList.add("main");
   contentEl.appendChild(mainEl);
+  const div1El = document.createElement("div");
+  div1El.classList.add("food1");
+  mainEl.appendChild(div1El);
+
+  const image1El = document.createElement("img");
+  image1El.classList.add("image1");
+  image1El.alt = "green and white cake slice";
+  image1El.src = food1;
+  div1El.appendChild(image1El);
+
+  const div2El = document.createElement("div");
+  div2El.classList.add("food1");
+  mainEl.appendChild(div2El);
+  div2El.textContent =
+    "Savor the divine delight of our green and white cake slice, a luscious symphony of flavors and visual";
+
+  const quoteEl = document.createElement("div");
+  quoteEl.classList.add("quote");
+  quoteEl.textContent = `Embark on a journey of sweet sensations, where every bite is a moment of pure
+  enchantment at Dessert Haven Delights`;
+  mainEl.appendChild(quoteEl);
+
+  const div3El = document.createElement("div");
+  div3El.classList.add("food2");
+  mainEl.appendChild(div3El);
+
+  const image2El = document.createElement("img");
+  image2El.classList.add("image2");
+  image2El.alt = "green smoothie with fruits";
+  image2El.src = food2;
+  div3El.appendChild(image2El);
+
+  const div4 = document.createElement("div");
+  div4.textContent = `Indulge in pure bliss with our refreshing smoothie, a burst of vibrant flavors that invigorate your
+    senses with each sip.`;
+  mainEl.appendChild(div4);
+
+  const footerEl = document.createElement("footer");
+  footerEl.classList.add("foot");
+  footerEl.textContent = "©2023 | Restaurant Dessert Haven Delights";
+  contentEl.appendChild(footerEl);
 };
 
 export default home;
