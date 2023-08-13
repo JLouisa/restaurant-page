@@ -1,6 +1,5 @@
 import { navigationBar } from "./navbar.js";
 import { addHome } from "./homepage.js";
-// import { calculator } from "./calculator.js";
 import "./style.css";
 import { addMenu } from "./menu.js";
 import { addContact } from "./contact.js";
