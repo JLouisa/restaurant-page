@@ -1,25 +1,40 @@
 import food1 from "./images/greenWhiteCake.jpg";
 import food2 from "./images/smooties.jpg";
 
+const contentEL = document.getElementById("content");
+const mainEl = document.createElement("div");
+const navEl = document.createElement("nav");
+const footerEl = document.createElement("footer");
+
 const addHome = function () {
-  const contentEl = () => {
-    const content = document.getElementById("content");
-    return content;
-  };
-  const navEl = document.createElement("nav");
   navEl.id = "navBar";
-  contentEl().appendChild(navEl);
+  contentEL.appendChild(navEl);
 
   const headerEl = document.createElement("header");
   headerEl.id = "head";
   navEl.appendChild(headerEl);
+
+  const navListEL = document.createElement("ul");
+  navListEL.id = "navList";
+  navEl.appendChild(navListEL);
+
+  const navHome = document.createElement("li");
+  const navMenu = document.createElement("li");
+  const navContact = document.createElement("li");
+
+  navHome.textContent = "Home";
+  navMenu.textContent = "Menu";
+  navContact.textContent = "Contact";
+
+  navListEL.appendChild(navHome);
+  navListEL.appendChild(navMenu);
+  navListEL.appendChild(navContact);
 
   const welcomeTitleEl = document.createElement("h1");
   welcomeTitleEl.classList.add("welcomeTitle");
   welcomeTitleEl.textContent = "Welcome to Dessert Haven Delights";
   headerEl.appendChild(welcomeTitleEl);
 
-  const mainEl = document.createElement("div");
   const bioEl = document.createElement("div");
   bioEl.classList.add("bio");
   mainEl.appendChild(bioEl);
@@ -32,7 +47,7 @@ const addHome = function () {
     gastronomic experience that captures the essence of Italian culinary magic`;
 
   mainEl.classList.add("main");
-  contentEl().appendChild(mainEl);
+  contentEL.appendChild(mainEl);
   const div1El = document.createElement("div");
   div1El.classList.add("food1");
   mainEl.appendChild(div1El);
@@ -70,16 +85,15 @@ const addHome = function () {
     senses with each sip.`;
   mainEl.appendChild(div4);
 
-  const footerEl = document.createElement("footer");
   footerEl.classList.add("foot");
   footerEl.textContent = "©2023 | Restaurant Dessert Haven Delights";
-  contentEl().appendChild(footerEl);
-
-  function removeHome() {
-    contentEl().remove();
-  }
-
-  return { contentEl, removeHome };
+  contentEL.appendChild(footerEl);
 };
 
-export default addHome;
+function removeHome() {
+  //   contentEL.removeChild(navEl);
+  contentEL.removeChild(mainEl);
+  contentEL.removeChild(footerEl);
+}
+
+export { addHome, removeHome };
