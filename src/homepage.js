@@ -1,11 +1,14 @@
 import food1 from "./images/greenWhiteCake.jpg";
 import food2 from "./images/smooties.jpg";
 
-const home = function () {
-  const contentEl = document.getElementById("content");
+const addHome = function () {
+  const contentEl = () => {
+    const content = document.getElementById("content");
+    return content;
+  };
   const navEl = document.createElement("nav");
   navEl.id = "navBar";
-  contentEl.appendChild(navEl);
+  contentEl().appendChild(navEl);
 
   const headerEl = document.createElement("header");
   headerEl.id = "head";
@@ -29,7 +32,7 @@ const home = function () {
     gastronomic experience that captures the essence of Italian culinary magic`;
 
   mainEl.classList.add("main");
-  contentEl.appendChild(mainEl);
+  contentEl().appendChild(mainEl);
   const div1El = document.createElement("div");
   div1El.classList.add("food1");
   mainEl.appendChild(div1El);
@@ -70,7 +73,13 @@ const home = function () {
   const footerEl = document.createElement("footer");
   footerEl.classList.add("foot");
   footerEl.textContent = "©2023 | Restaurant Dessert Haven Delights";
-  contentEl.appendChild(footerEl);
+  contentEl().appendChild(footerEl);
+
+  function removeHome() {
+    contentEl().remove();
+  }
+
+  return { contentEl, removeHome };
 };
 
-export default home;
+export default addHome;

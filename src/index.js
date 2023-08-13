@@ -1,9 +1,10 @@
-import home from "./homepage.js";
+import addHome from "./homepage.js";
 import { calculator } from "./calculator.js";
 import "./style.css";
-// import "./image/greenWhiteCake.jpg";
 
-home();
+addHome();
+console.log(addHome().removeHome);
+// addHome().removeHome();
 
 console.log("It's working again!!");
 console.log(calculator.multi(4, 8));
