@@ -70,7 +70,7 @@ const addContact = (function () {
 
   const ourSocials = document.createElement("h1");
   ourSocials.classList.add("titleSocials");
-  ourSocials.textContent = "Our Socials";
+  ourSocials.textContent = "Follow Us On Our Socials";
   socialMediaLinksEl.appendChild(ourSocials);
 
   const socialDiv = document.createElement("div");

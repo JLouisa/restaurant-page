@@ -178,3 +178,37 @@ footer {
 .divText1 {
   padding: 1rem;
 }
+
+.navHome,
+.navMenu,
+.navContact {
+  user-select: none;
+}
+
+.navMenu:active {
+  text-decoration: underline;
+}
+.navContact:active {
+  text-decoration: underline;
+}
+.navHome:active {
+  text-decoration: underline;
+}
+
+.navMenu:hover {
+  transform: scale(1.1);
+  transition: ease-in;
+}
+.navContact:hover {
+  transform: scale(1.1);
+  transition: ease-in;
+}
+.navHome:hover {
+  transform: scale(1.1);
+  transition: ease-in;
+}
+
+.socialDiv > img:hover {
+  transform: scale(1.1);
+  transition: ease-in;
+}

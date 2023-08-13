@@ -16,14 +16,14 @@ contentEL.appendChild(footerEl);
 //Navigation
 navigationBar;
 
-//Homepage
-// addHome.show();
+// Homepage;
+addHome.show();
 
-//Menu
-// addMenu.hide();
+// Menu;
+addMenu.hide();
 
-//Contact
-// addContact.hide();
+// Contact;
+addContact.hide();
 
 const homeBtn = document.querySelector(".navHome");
 homeBtn.addEventListener("click", () => {
