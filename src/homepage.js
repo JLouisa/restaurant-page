@@ -1,12 +1,17 @@
 import food1 from "./images/greenWhiteCake.jpg";
 import food2 from "./images/smooties.jpg";
 
-const contentEL = document.querySelector("#content");
-const mainEl = document.createElement("div");
-const navEl = document.createElement("nav");
-const footerEl = document.createElement("footer");
+// const contentEL = document.querySelector("#content");
+// const mainEl = document.createElement("div");
+// const navEl = document.createElement("nav");
+// const footerEl = document.createElement("footer");
 
 const addHome = (function () {
+  const contentEL = document.querySelector("#content");
+  const mainEl = document.createElement("div");
+  const navEl = document.createElement("nav");
+  const footerEl = document.createElement("footer");
+
   // content Creation
   navEl.id = "navBar";
   contentEL.appendChild(navEl);

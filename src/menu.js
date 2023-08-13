@@ -2,11 +2,14 @@ import food0 from "./images/pancakes.jpg";
 import food1 from "./images/cake.jpg";
 import food2 from "./images/tart.jpg";
 
-const contentEL = document.getElementById("content");
-const mainMenuEl = document.createElement("div");
+// const contentEL = document.getElementById("content");
+// const mainMenuEl = document.createElement("div");
 // const footMenuEl = document.createElement("footer");
 
 const addMenu = (function () {
+  const contentEL = document.getElementById("content");
+  const mainMenuEl = document.createElement("div");
+
   const hide = () => {
     mainMenuEl.setAttribute("style", "display: none");
   };
