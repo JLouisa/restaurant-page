@@ -17,13 +17,13 @@ contentEL.appendChild(footerEl);
 navigationBar;
 
 //Homepage
-addHome.show();
+// addHome.show();
 
 //Menu
-addMenu.hide();
+// addMenu.hide();
 
 //Contact
-addContact.hide();
+// addContact.hide();
 
 const homeBtn = document.querySelector(".navHome");
 homeBtn.addEventListener("click", () => {
@@ -45,3 +45,7 @@ ContactBtn.addEventListener("click", () => {
   addMenu.hide();
   addContact.show();
 });
+
+//   Styling content
+const body = document.querySelector("body");
+body.setAttribute("style", "background-color: rgb(249, 250, 254);");

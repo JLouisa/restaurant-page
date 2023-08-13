@@ -1,0 +1,180 @@
+::root {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.199);
+}
+
+#navBar {
+  justify-content: space-evenly;
+  min-width: 100%;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.219);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.199);
+}
+
+ul {
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+.headerTitle {
+  font-size: 2rem;
+}
+
+/* .main, */
+.mainHome,
+.contact,
+.mainMenu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70vw;
+}
+
+.food1,
+.food2 {
+  display: flex;
+}
+
+h1,
+h3,
+.welcomeTitle {
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-size: 3rem;
+}
+
+.mainMenu {
+  gap: 2rem;
+}
+
+.menuItems0,
+.menuItems1,
+.menuItems2 {
+  display: flex;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.192);
+  padding: 1rem;
+}
+
+.text0,
+.text1,
+.text2 {
+  padding: 0rem 3rem;
+  font-size: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 3rem;
+}
+
+.contactText0 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.socialDiv {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-height: 3rem;
+  border-top: 1px solid lightgrey;
+}
+
+.mainHome {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+
+.divH0,
+.divH1,
+.divBoxEl0,
+.divBoxEl1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 3rem;
+  font-size: 2rem;
+  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.199); */
+}
+
+.divH0 {
+  padding-bottom: 2rem;
+}
+
+.divBoxEl1 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 3rem;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+.divH1 {
+  padding: 3rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgba(211, 211, 211, 0.158);
+  text-align: center;
+  font-weight: 700;
+}
+
+.divBoxEl0,
+.divBoxEl1 {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.199);
+}
+
+.menuItems0 {
+  padding: 1rem;
+}
+
+.divText0,
+.divText1 {
+  padding: 1rem;
+}

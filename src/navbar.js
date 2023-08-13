@@ -5,6 +5,11 @@ const navigationBar = (function () {
   navEl.id = "navBar";
   contentEL.appendChild(navEl);
 
+  const headerTitle = document.createElement("h3");
+  headerTitle.textContent = "Dessert Haven Delights";
+  headerTitle.classList.add("headerTitle");
+  navEl.appendChild(headerTitle);
+
   const headerEl = document.createElement("header");
   headerEl.id = "head";
   navEl.appendChild(headerEl);
@@ -28,6 +33,10 @@ const navigationBar = (function () {
   navListEL.appendChild(navHome);
   navListEL.appendChild(navMenu);
   navListEL.appendChild(navContact);
+
+  //   Styling content
+  navEl.setAttribute("style", "display: flex");
+  navListEL.setAttribute("style", "display: flex;");
 })();
 
 export { navigationBar };

@@ -1,5 +1,5 @@
-import food1 from "./images/greenWhiteCake.jpg";
-import food2 from "./images/smooties.jpg";
+import table from "./images/table.jpg";
+import bar from "./images/bar.jpg";
 
 // const contentEL = document.querySelector("#content");
 // const mainEl = document.createElement("div");
@@ -10,63 +10,64 @@ const addHome = (function () {
   const contentEL = document.querySelector("#content");
   const mainEl = document.createElement("div");
   const mainHomeEl = document.createElement("div");
+  mainHomeEl.classList.add("mainHome");
   contentEL.appendChild(mainEl);
   mainEl.appendChild(mainHomeEl);
 
   // content Creation
-  const welcomeTitleEl = document.createElement("h1");
-  welcomeTitleEl.classList.add("welcomeTitle");
-  welcomeTitleEl.textContent = "Welcome to Dessert Haven Delights";
-  mainHomeEl.appendChild(welcomeTitleEl);
-
-  const bioEl = document.createElement("div");
-  bioEl.classList.add("bio");
-  mainHomeEl.appendChild(bioEl);
-  bioEl.textContent = `Experience culinary bliss at "Dessert Haven Delights," where every visit is a journey through exquisite
+  let divH = [];
+  let divBoxEl = [];
+  let divTextEl = [];
+  let divText = [];
+  let imageHome = [];
+  let images = [table, bar];
+  let imagesAlt = ["beautiful forest view from table", "bar with a lot of wines"];
+  let mainText = [
+    `Experience culinary bliss at "Dessert Haven Delights," where every visit is a journey through exquisite
     flavors and impeccable service. Nestled in a cozy ambiance, our restaurant celebrates the art of Italian cuisine
     with a modern twist. Indulge in a symphony of handcrafted pasta, rich sauces, and locally sourced
     ingredients that dance harmoniously on your palate. Our passionate chefs, dedicated to perfection, craft
     each dish with love. From the first bite to the last, you'll be immersed in a culinary symphony that
     transcends ordinary dining. "Dessert Haven Delights" isn't just a restaurant; it's an unforgettable
-    gastronomic experience that captures the essence of Italian culinary magic`;
+    gastronomic experience that captures the essence of Italian culinary magic`,
 
-  mainHomeEl.classList.add("main");
-  const div1El = document.createElement("div");
-  div1El.classList.add("food1");
-  mainHomeEl.appendChild(div1El);
+    `"Embark on a journey of sweet sensations, where every bite is a moment of pure enchantment at Dessert Haven Delights"`,
+  ];
+  let mainText2 = [
+    `Dine immersed in nature's embrace. Our restaurant offers a breathtaking view of lush, verdant forests stretching to the horizon. Enjoy a meal enveloped in tranquility as sunlight filters through the foliage, creating a serene ambiance that elevates your culinary experience to unparalleled heights.`,
+    `Elevate your spirits at our bar adorned with a splendid array of wines and libations. From the comfort of your seat, gaze upon a dazzling selection that caters to every palate. The symphony of colors and textures promises a delightful journey for connoisseurs and enthusiasts alike, setting the perfect tone for your evening.`,
+  ];
 
-  const image1El = document.createElement("img");
-  image1El.classList.add("image1");
-  image1El.alt = "green and white cake slice";
-  image1El.src = food1;
-  div1El.appendChild(image1El);
+  const welcomeTitleEl = document.createElement("h1");
+  welcomeTitleEl.classList.add("welcomeTitle");
+  welcomeTitleEl.textContent = "Welcome to Dessert Haven Delights";
+  mainHomeEl.appendChild(welcomeTitleEl);
 
-  const div2El = document.createElement("div");
-  div2El.classList.add("food1");
-  mainHomeEl.appendChild(div2El);
-  div2El.textContent =
-    "Savor the divine delight of our green and white cake slice, a luscious symphony of flavors and visual";
+  for (let i = 0; i < 2; i++) {
+    divH[i] = document.createElement("div");
+    divH[i].classList.add(`divH${i}`);
+    divH[i].textContent = mainText[i];
+    mainHomeEl.appendChild(divH[i]);
 
-  const quoteEl = document.createElement("div");
-  quoteEl.classList.add("quote");
-  quoteEl.textContent = `Embark on a journey of sweet sensations, where every bite is a moment of pure
-  enchantment at Dessert Haven Delights`;
-  mainHomeEl.appendChild(quoteEl);
+    divBoxEl[i] = document.createElement("div");
+    divBoxEl[i].classList.add(`divBoxEl${i}`);
+    mainHomeEl.appendChild(divBoxEl[i]);
 
-  const div3El = document.createElement("div");
-  div3El.classList.add("food2");
-  mainHomeEl.appendChild(div3El);
+    divTextEl[i] = document.createElement("div");
+    divTextEl[i].classList.add(`divTextEl${i}`);
+    divBoxEl[i].appendChild(divTextEl[i]);
 
-  const image2El = document.createElement("img");
-  image2El.classList.add("image2");
-  image2El.alt = "green smoothie with fruits";
-  image2El.src = food2;
-  div3El.appendChild(image2El);
+    divText[i] = document.createElement("div");
+    divText[i].classList.add(`divText${i}`);
+    divText[i].textContent = mainText2[i];
+    divTextEl[i].appendChild(divText[i]);
 
-  const div4 = document.createElement("div");
-  div4.textContent = `Indulge in pure bliss with our refreshing smoothie, a burst of vibrant flavors that invigorate your
-    senses with each sip.`;
-  mainHomeEl.appendChild(div4);
+    imageHome[i] = document.createElement("img");
+    imageHome[i].classList.add(`image${i}`);
+    imageHome[i].src = images[i];
+    imageHome[i].alt = imagesAlt[i];
+    divBoxEl[i].appendChild(imageHome[i]);
+  }
 
   //   Styling content
 
@@ -75,7 +76,7 @@ const addHome = (function () {
   }
 
   function show() {
-    mainHomeEl.setAttribute("style", "display: block");
+    mainHomeEl.setAttribute("style", "display: flex");
   }
   return { hide, show };
 })();

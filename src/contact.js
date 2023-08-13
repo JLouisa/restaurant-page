@@ -73,12 +73,16 @@ const addContact = (function () {
   ourSocials.textContent = "Our Socials";
   socialMediaLinksEl.appendChild(ourSocials);
 
+  const socialDiv = document.createElement("div");
+  socialDiv.classList.add("socialDiv");
+  socialMediaLinksEl.appendChild(socialDiv);
+
   for (let n = 0; n < 4; n++) {
     icons[n] = document.createElement("img");
     icons[n].classList.add(`icons${n}`);
     icons[n].alt = imagesAlt[n];
     icons[n].src = images[n];
-    socialMediaLinksEl.appendChild(icons[n]);
+    socialDiv.appendChild(icons[n]);
   }
 
   const hide = () => {
@@ -86,8 +90,10 @@ const addContact = (function () {
   };
 
   const show = () => {
-    mainContactEl.setAttribute("style", "display: block");
+    mainContactEl.setAttribute("style", "display: flex");
   };
+
+  //   Styling content
 
   return { hide, show };
 })();

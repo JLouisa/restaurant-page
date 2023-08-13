@@ -16,6 +16,9 @@ const addMenu = (function () {
   mainMenuEl.classList.add("mainMenu");
 
   // Content Creation
+  const menuTitle = document.createElement("h1");
+  menuTitle.textContent = "Our Menu";
+  mainMenuEl.appendChild(menuTitle);
   let menuItemsEl = [];
   let menuImagesEl = [];
   let menuDivTextEl = [];
@@ -70,12 +73,14 @@ const addMenu = (function () {
     menuDivTextEl[i].appendChild(menuTextEl[i]);
   }
 
+  //   Styling content
+
   const hide = () => {
     mainMenuEl.setAttribute("style", "display: none");
   };
 
   const show = () => {
-    mainMenuEl.setAttribute("style", "display: block");
+    mainMenuEl.setAttribute("style", "display: flex");
   };
 
   return { hide, show };
