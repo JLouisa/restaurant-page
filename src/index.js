@@ -1,14 +1,12 @@
-import { addHome, removeHome } from "./homepage.js";
+// import { addHome } from "./homepage.js";
 import { calculator } from "./calculator.js";
 import "./style.css";
-import { addMenu } from "./menu.js";
+// import { addMenu } from "./menu.js";
 
 //Homepage
-// addHome();
-// console.log(removeHome);
+// addHome.hide();
 
 //Menu
-addMenu();
-console.log(addMenu().hideMenu);
+// addMenu.hide();
 
 console.log(calculator.multi(4, 8));

@@ -6,7 +6,7 @@ const mainEl = document.createElement("div");
 const navEl = document.createElement("nav");
 const footerEl = document.createElement("footer");
 
-const addHome = function () {
+const addHome = (function () {
   // content Creation
   navEl.id = "navBar";
   contentEL.appendChild(navEl);
@@ -91,12 +91,15 @@ const addHome = function () {
   contentEL.appendChild(footerEl);
 
   //   Styling content
-};
 
-function removeHome() {
-  //   contentEL.removeChild(navEl);
-  contentEL.removeChild(mainEl);
-  //   contentEL.removeChild(footerEl);
-}
+  function hide() {
+    mainEl.setAttribute("style", "display: none");
+  }
 
-export { addHome, removeHome };
+  function show() {
+    mainEl.setAttribute("style", "display: block");
+  }
+  return { hide, show };
+})();
+
+export { addHome };

@@ -6,7 +6,15 @@ const contentEL = document.getElementById("content");
 const mainMenuEl = document.createElement("div");
 // const footMenuEl = document.createElement("footer");
 
-const addMenu = function () {
+const addMenu = (function () {
+  const hide = () => {
+    mainMenuEl.setAttribute("style", "display: none");
+  };
+
+  const show = () => {
+    mainMenuEl.setAttribute("style", "display: block");
+  };
+
   contentEL.appendChild(mainMenuEl);
   mainMenuEl.classList.add("mainMenu");
 
@@ -64,14 +72,8 @@ const addMenu = function () {
     menuTextEl[i].textContent = menuText[i];
     menuDivTextEl[i].appendChild(menuTextEl[i]);
   }
-  function hideMenu() {
-    mainMenuEl.setAttribute("style", "display: none");
-  }
 
-  function showMenu() {
-    mainMenuEl.setAttribute("style", "display: block");
-  }
-  return { hideMenu, showMenu };
-};
+  return { hide, show };
+})();
 
 export { addMenu };
