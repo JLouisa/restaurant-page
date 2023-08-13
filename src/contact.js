@@ -5,11 +5,16 @@ import image4 from "./images/whatsapp.png";
 
 const addContact = (function () {
   const contentEL = document.querySelector("#content");
+
+  const mainEl = document.createElement("div");
+  contentEL.appendChild(mainEl);
+
   const mainContactEl = document.createElement("div");
+  mainEl.appendChild(mainContactEl);
   const contactInfoEl = document.createElement("div");
   const socialMediaLinksEl = document.createElement("div");
   const contactInfo = {
-    "Operating Hours": `3pm till 12pm`,
+    "Operating Hours": `mon/sun: 3pm till 12pm`,
     "Phone Number": "+1 (608) 251-1802",
     "E-mail": "info@DessertHavenDelights.com",
     Address: "707 S Mills St, Shadowfen Marshes, Kingdom of Eldoria",

@@ -8,9 +8,11 @@ import food2 from "./images/tart.jpg";
 
 const addMenu = (function () {
   const contentEL = document.getElementById("content");
+  const mainEl = document.createElement("div");
   const mainMenuEl = document.createElement("div");
 
-  contentEL.appendChild(mainMenuEl);
+  contentEL.appendChild(mainEl);
+  mainEl.appendChild(mainMenuEl);
   mainMenuEl.classList.add("mainMenu");
 
   // Content Creation
