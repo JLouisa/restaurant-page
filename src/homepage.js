@@ -1,12 +1,13 @@
 import food1 from "./images/greenWhiteCake.jpg";
 import food2 from "./images/smooties.jpg";
 
-const contentEL = document.getElementById("content");
+const contentEL = document.querySelector("#content");
 const mainEl = document.createElement("div");
 const navEl = document.createElement("nav");
 const footerEl = document.createElement("footer");
 
 const addHome = function () {
+  // content Creation
   navEl.id = "navBar";
   contentEL.appendChild(navEl);
 
@@ -88,12 +89,14 @@ const addHome = function () {
   footerEl.classList.add("foot");
   footerEl.textContent = "©2023 | Restaurant Dessert Haven Delights";
   contentEL.appendChild(footerEl);
+
+  //   Styling content
 };
 
 function removeHome() {
   //   contentEL.removeChild(navEl);
   contentEL.removeChild(mainEl);
-  contentEL.removeChild(footerEl);
+  //   contentEL.removeChild(footerEl);
 }
 
 export { addHome, removeHome };
