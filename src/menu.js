@@ -10,14 +10,6 @@ const addMenu = (function () {
   const contentEL = document.getElementById("content");
   const mainMenuEl = document.createElement("div");
 
-  const hide = () => {
-    mainMenuEl.setAttribute("style", "display: none");
-  };
-
-  const show = () => {
-    mainMenuEl.setAttribute("style", "display: block");
-  };
-
   contentEL.appendChild(mainMenuEl);
   mainMenuEl.classList.add("mainMenu");
 
@@ -75,6 +67,14 @@ const addMenu = (function () {
     menuTextEl[i].textContent = menuText[i];
     menuDivTextEl[i].appendChild(menuTextEl[i]);
   }
+
+  const hide = () => {
+    mainMenuEl.setAttribute("style", "display: none");
+  };
+
+  const show = () => {
+    mainMenuEl.setAttribute("style", "display: block");
+  };
 
   return { hide, show };
 })();

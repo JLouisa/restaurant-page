@@ -75,6 +75,16 @@ const addContact = (function () {
     icons[n].src = images[n];
     socialMediaLinksEl.appendChild(icons[n]);
   }
+
+  const hide = () => {
+    mainContactEl.setAttribute("style", "display: none");
+  };
+
+  const show = () => {
+    mainContactEl.setAttribute("style", "display: block");
+  };
+
+  return { hide, show };
 })();
 
 export { addContact };

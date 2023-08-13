@@ -9,33 +9,8 @@ import food2 from "./images/smooties.jpg";
 const addHome = (function () {
   const contentEL = document.querySelector("#content");
   const mainEl = document.createElement("div");
-  const navEl = document.createElement("nav");
-  const footerEl = document.createElement("footer");
 
   // content Creation
-  navEl.id = "navBar";
-  contentEL.appendChild(navEl);
-
-  const headerEl = document.createElement("header");
-  headerEl.id = "head";
-  navEl.appendChild(headerEl);
-
-  const navListEL = document.createElement("ul");
-  navListEL.id = "navList";
-  navEl.appendChild(navListEL);
-
-  const navHome = document.createElement("li");
-  const navMenu = document.createElement("li");
-  const navContact = document.createElement("li");
-
-  navHome.textContent = "Home";
-  navMenu.textContent = "Menu";
-  navContact.textContent = "Contact";
-
-  navListEL.appendChild(navHome);
-  navListEL.appendChild(navMenu);
-  navListEL.appendChild(navContact);
-
   const welcomeTitleEl = document.createElement("h1");
   welcomeTitleEl.classList.add("welcomeTitle");
   welcomeTitleEl.textContent = "Welcome to Dessert Haven Delights";
@@ -90,10 +65,6 @@ const addHome = (function () {
   div4.textContent = `Indulge in pure bliss with our refreshing smoothie, a burst of vibrant flavors that invigorate your
     senses with each sip.`;
   mainEl.appendChild(div4);
-
-  footerEl.classList.add("foot");
-  footerEl.textContent = "©2023 | Restaurant Dessert Haven Delights";
-  contentEL.appendChild(footerEl);
 
   //   Styling content
 
